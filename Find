@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+struct hiu{
+    string nama;
+    string kesukaan;
+};
+
+int main(){
+    int n;
+    cout <<" Jumlah biodata : ";
+    cin >> n;
+
+    hiu list[n];
+
+    for (int i=0 ; i<n ; ++i){
+        cout << " Nama hiu (" << i + 1 << ") ";
+        cin >> list[i].nama;
+
+        cout << " Nama kesukaan (" << i + 1 << ") ";
+        cin >> list[i].kesukaan;   
+}
+
+cout << " Hiu yang suka tomato : " << endl;
+for ( int i=0 ; i<n ; ++i){
+    if (list[i].kesukaan == "tomato"){
+        cout << list[i].nama << endl;
+    }
+}
+return 0;
+}
